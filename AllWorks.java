@@ -1,12 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package ShakespeareParser;
+package textminingparser;
+
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -34,7 +29,9 @@ public class AllWorks {
         for (Work w: works) {
             res.addAll(w.getSpeakers());
         }
-        Collections.sort(res, (speaker1, speaker2) -> speaker1.getNumberOfMonologues()-speaker2.getNumberOfMonologues());
+        Collections.sort(res, (speaker1, speaker2) -> speaker2.getNumberOfMonologues()-speaker1.getNumberOfMonologues());
         return res;
     }
+    
+
 }
